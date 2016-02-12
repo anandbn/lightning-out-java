@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Lightning on Heroku</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"></link>
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Lightning Out on Heroku</h1>
+				<button class="btn btn-primary btn-lg" onclick="forceLogin()">
+					Login to Salesforce
+				</button>
+				<button id="chatterFeedButton" class="btn btn-primary btn-lg" 
+						onclick="createChatterFeed('NEWS')" style="display: none">
+					Create Chatter Feed
+				</button>
+				<button id="recordViewButton" class="btn btn-primary btn-lg" 
+						onclick="viewRecord('0017000000NkNaq','MINI')" style="display: none">
+					View Record
+				</button>
+				<button id="helloWorldButton" class="btn btn-primary btn-lg" 
+						onclick="customComponent()" style="display: none">
+					Custom Lighting Component
+				</button>
+			</div>
+			<div id="chatterFeed"/>
+			<div id="recordView"/>
+			<div id="customComponent"/>
+		</div>
+		<script>
+			var config = {
+				appId: '3MVG9VmVOCGHKYBT1qqbQJTR6ckRcDODE7_aCcuPu1dNebQchM3mpMHxdu7JSCX8nxvLU3K2FRtW2m5mcUSfv',
+				loApp: 'c:LoTest'
+			};
+		</script>
+		<script src="./javascripts/force.oauth.js"></script>
+		<script src="./javascripts/app.js"></script>
+		<script src="https://ltngout-dev-ed.my.salesforce.com/lightning/lightning.out.js"></script>
+	</body>
+</html>
